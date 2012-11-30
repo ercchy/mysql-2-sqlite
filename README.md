@@ -2,10 +2,18 @@ mysql-2-sqlite
 ==============
 
 MySql to Sqlite conversion script and instructions
-* Make MySql dump 
+
+
+* Make MySql dump:
+
 ```
 $ mysqldump -u root -p --compatible=ansi --skip-opt generator > dumpfile
 ```
+
+
+* With included script
+
+
 
 ```bash
  #!/bin/bash
@@ -49,4 +57,18 @@ else
 fi
 
 ```
+
+
+run the conversion:
+
+
+
+```
+$ mysql-to-sqlite.sh dumpfile
+```
+
+
+****** if all goes well, you should now have a dumpfile.db which can be used via sqlite3.
+
+
 
